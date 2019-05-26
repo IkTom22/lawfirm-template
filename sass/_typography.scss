@@ -1,0 +1,26 @@
+%heading {
+    font-family: $font-display;
+   
+}
+.heading-1 {
+    @extend %heading;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: $color-primary-light;
+    font-weight: 300;
+}
+.heading-2 {
+    @extend %heading;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: $color-grey-light-1;
+}
+.heading-3 {
+    @extend %heading;
+    font-size: 3rem;
+}
+.heading-4 {
+    @extend %heading;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+} 

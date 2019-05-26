@@ -1,0 +1,38 @@
+.header {
+    background-image: linear-gradient(rgba($color-secondary-dark, .8), rgba($color-secondary-dark, .9)), url(../img/businessman-01-lg.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: full-start / col-end 5;
+    padding: 35% 0;
+    text-align: center;
+
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+
+    grid-gap: 1.8rem;
+    &__logo {
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        justify-content: space-between;
+        align-items: center;
+
+        &::before, 
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: $color-prime;
+        }
+    }
+    
+
+    &__title{
+
+    }
+    &__sub {
+        font-family: $font-primary;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
