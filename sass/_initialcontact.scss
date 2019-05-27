@@ -2,4 +2,49 @@
     background-color: $color-secondary;
     color: #fff;
     grid-column: col-start 6 / -1;
+   
+    display: grid;
+    
+    grid-template-columns: minmax(5rem, auto) [form-start] minmax(20rem, auto) [form-end] minmax(5rem, auto);
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 2rem;
+
+    
+    &__title {
+        font-weight: 300; 
+        grid-column: form-start /form-end;
+        align-self: end;
+
+    }
+    &__form {
+        grid-column: form-start /form-end;
+        align-self: start;
+    }
+}
+
+.form {  
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr);
+    grid-row-gap: 1.8rem;
+    color: $color-grey-dark-1;
+    font-family: $font-primary;  
+    
+
+    &__input {
+        background-color: #fff;
+        border-radius: 2px;
+        min-height: 5rem;
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        border: none;
+        letter-spacing: 2px;
+    }
+    &__textarea {
+        color: $color-grey-dark-1;
+        font-family: $font-primary;
+    }
+
+
 }

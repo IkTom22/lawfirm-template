@@ -20,6 +20,32 @@ body {
   grid-template-rows: 100vh min-content 40vw repeat(4, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+.btn, .btn:link, .btn:visited {
+  padding: 1.5rem;
+  border-radius: 2px;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #614c06;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  text-align: center;
+  align-self: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-0.4rem);
+  background-color: #a07c08;
+  box-shadow: 0 2rem 2rem rgba(58, 54, 45, 0.2); }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 2rem 2rem rgba(58, 54, 45, 0.2); }
+
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif; }
 
@@ -31,8 +57,9 @@ body {
 
 .heading-2 {
   text-transform: uppercase;
-  font-size: 3.5rem;
-  color: #f4ebcc; }
+  font-size: 3rem;
+  color: #614c06;
+  font-weight: 300; }
 
 .heading-3 {
   font-size: 3rem; }
@@ -42,23 +69,49 @@ body {
   text-transform: uppercase; }
 
 .header {
-  background-image: linear-gradient(rgba(5, 4, 14, 0.8), rgba(5, 4, 14, 0.9)), url(../img/businessman-01-lg.jpg);
+  background-color: #05040e;
+  background-image: linear-gradient(to right, #05040e, rgba(5, 4, 14, 0.7), rgba(5, 4, 14, 0.4)), url(../img/businessman-01-lg.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   grid-column: full-start / col-end 5;
-  padding: 35% 0;
+  padding: 15% 0;
   text-align: center;
   display: grid;
+  grid-template-columns: minmax(60rem, auto);
   justify-content: center;
   align-items: center;
-  grid-gap: 1.8rem; }
+  grid-row-gap: 3rem; }
+  .header__logo {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-column-gap: 1rem;
+    align-items: center;
+    color: rgba(160, 124, 8, 0.7); }
+    .header__logo::before, .header__logo::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: currentColor; }
   .header__sub {
     font-family: "Lato", sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase; }
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 3rem max-content 3rem;
+    grid-column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: rgba(240, 210, 112, 0.7); }
+    .header__sub::before, .header__sub::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: rgba(160, 124, 8, 0.3); }
 
 .sidebar {
-  background-color: #a07c08;
+  background-image: linear-gradient(to bottom, #a07c08, #f0d270, #614c06, #a07c08, #f0d270, #614c06, #a07c08);
   grid-row: 1 / -1;
   display: flex;
   justify-content: center; }
@@ -85,7 +138,38 @@ body {
 .initialcontact {
   background-color: #110f22;
   color: #fff;
-  grid-column: col-start 6 / -1; }
+  grid-column: col-start 6 / -1;
+  display: grid;
+  grid-template-columns: minmax(5rem, auto) [form-start] minmax(20rem, auto) [form-end] minmax(5rem, auto);
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 2rem; }
+  .initialcontact__title {
+    font-weight: 300;
+    grid-column: form-start /form-end;
+    align-self: end; }
+  .initialcontact__form {
+    grid-column: form-start /form-end;
+    align-self: start; }
+
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr);
+  grid-row-gap: 1.8rem;
+  color: #5a5544;
+  font-family: "Lato", sans-serif; }
+  .form__input {
+    background-color: #fff;
+    border-radius: 2px;
+    min-height: 5rem;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border: none;
+    letter-spacing: 2px; }
+  .form__textarea {
+    color: #5a5544;
+    font-family: "Lato", sans-serif; }
 
 .fields {
   margin: 5rem 0;
