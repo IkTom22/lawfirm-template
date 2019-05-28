@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  color: #f4ebcc;
+  color: #5a5544;
   font-weight: 300;
   line-height: 1.6; }
 
@@ -46,6 +46,18 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 2rem 2rem rgba(58, 54, 45, 0.2); }
 
+.btn__text {
+  font-size: 1.4rem; }
+  .btn__text:link, .btn__text:visited {
+    text-decoration: none;
+    display: inline-block;
+    color: #a07c08;
+    transition: all .2s; }
+  .btn__text:hover {
+    color: #f0d270;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 2rem 3rem rgba(160, 124, 8, 0.3); }
+
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif; }
 
@@ -62,11 +74,21 @@ body {
   font-weight: 300; }
 
 .heading-3 {
-  font-size: 3rem; }
+  font-size: 2.5rem; }
 
 .heading-4 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-transform: uppercase; }
+
+.section-title {
+  grid-column: 1 /-1; }
+  .section-title::after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 8rem;
+    background-color: rgba(160, 124, 8, 0.8);
+    margin: 1rem auto; }
 
 .header {
   background-color: #05040e;
@@ -179,8 +201,8 @@ body {
   text-align: center;
   align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 6rem;
-  padding: 3rem 4rem; }
+  grid-gap: 3rem;
+  padding: 0 4rem; }
   .fields h2 {
     grid-column: 1 /-1; }
     .fields h2::after {
@@ -193,10 +215,11 @@ body {
 
 .field {
   display: grid;
-  grid-gap: 2.5rem;
+  grid-gap: 1.5rem;
   justify-content: center;
   padding: 4rem 3rem;
-  box-shadow: 0 1rem 2rem rgba(160, 124, 8, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(160, 124, 8, 0.2);
+  transition: all .2s; }
   .field__icon {
     fill: #a07c08;
     width: 6rem;
@@ -208,6 +231,12 @@ body {
   .field__text {
     font-size: 1.6rem;
     color: #a59e87; }
+  .field h4 {
+    color: #614c06;
+    font-weight: 400; }
+  .field:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 2rem 2rem rgba(160, 124, 8, 0.3); }
 
 .about {
   background-color: rgba(17, 15, 34, 0.9);
@@ -227,9 +256,42 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.team {
-  background-color: pink;
-  grid-column: center-start/center-end; }
+.attoneys {
+  margin: 5rem 0;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  padding: 0 4rem; }
+
+.attoney {
+  width: 100%;
+  height: 35rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  color: #a59e87; }
+  .attoney p {
+    font-size: 1.5rem; }
+  .attoney__img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%; }
+  .attoney__details {
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(5, 4, 14, 0.9);
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    padding: 2rem; }
+  .attoney__name {
+    font-weight: 300;
+    color: #f0d270; }
 
 .stories__pictures {
   background-color: purple;

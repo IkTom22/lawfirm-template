@@ -1,4 +1,3 @@
-
 .btn {
     &,
     &:link, 
@@ -28,5 +27,29 @@
         outline: none;
         transform: translateY(-0.1rem);
         box-shadow: 0 2rem 2rem rgba($color-grey-dark-2, .2);
+    }
+    &__text {
+        font-size: 1.4rem;
+       
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            display: inline-block;
+            color: $color-primary;
+            transition: all .2s;
+        }
+
+        &:hover {
+            color: $color-primary-light;
+            transform: translateY(-.2rem);
+            box-shadow: 0 2rem 3rem rgba($color-primary, .3);
+        }
+
+
+
+
+       
+
     }
 }

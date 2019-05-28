@@ -18,6 +18,9 @@ $color-grey-dark-2: #3a362d;
 // FONT VARIABLES
 $font-primary: 'Lato', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+
+
 // RESPONSIVE BREAKPOINTS
 
 
@@ -37,11 +40,11 @@ html {
 body {
     font-family: $font-primary;
     // color: $color-grey-dark-2;
-    color: $color-grey-light-1;
+    color: $color-grey-dark-1;
     
     font-weight: 300;
     line-height: 1.6;
-
+  
 }
 .container {
     display: grid;

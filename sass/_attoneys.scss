@@ -1,0 +1,52 @@
+.attoneys {
+    margin: 5rem 0;
+    grid-column: center-start/center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    padding: 0 4rem;
+    
+}
+
+    
+
+.attoney {
+    width: 100%;
+    height: 35rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    color: $color-grey-light-2;
+    
+    p {
+        font-size: 1.5rem;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        
+    }
+
+    &__details {
+        position: absolute;
+        z-index: 5;
+        background-color:rgba($color-secondary-dark, .9);
+        top: 60%;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        padding: 2rem;
+
+    }
+    &__name {
+        font-weight: 300;
+        color: $color-primary-light;
+    }
+
+
+}
