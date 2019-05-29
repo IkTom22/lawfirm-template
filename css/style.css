@@ -58,7 +58,7 @@ body {
     transform: translateY(-0.2rem);
     box-shadow: 0 2rem 3rem rgba(160, 124, 8, 0.3); }
 
-.heading-1, .heading-2, .heading-3, .heading-4 {
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5 {
   font-family: "Josefin Sans", sans-serif; }
 
 .heading-1 {
@@ -79,6 +79,11 @@ body {
 .heading-4 {
   font-size: 1.8rem;
   text-transform: uppercase; }
+
+.heading-5 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300; }
 
 .section-title {
   grid-column: 1 /-1; }
@@ -158,7 +163,7 @@ body {
     transform: translateY(-1.1rem); }
 
 .initialcontact {
-  background-color: #110f22;
+  background-color: #02010f;
   color: #fff;
   grid-column: col-start 6 / -1;
   display: grid;
@@ -245,7 +250,7 @@ body {
       box-shadow: 0 2rem 2rem rgba(160, 124, 8, 0.3); }
 
 .about {
-  background-color: rgba(17, 15, 34, 0.9);
+  background-color: rgba(8, 3, 65, 0.9);
   grid-column: full-start / full-end;
   position: relative; }
 
@@ -265,7 +270,8 @@ body {
 .attoneys {
   padding: 5rem 0;
   grid-column: full-start / full-end;
-  background-image: linear-gradient(to right bottom, rgba(5, 4, 14, 0.8), rgba(5, 4, 14, 0.7), rgba(17, 15, 34, 0.7), rgba(160, 124, 8, 0.6)), url(../img/chess-01-lg.jpg);
+  background-blend-mode: screen;
+  background-image: linear-gradient(to right bottom, #067c72, #067c72), url(../img/chess-01-lg.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -277,17 +283,40 @@ body {
     align-items: start;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem;
-    padding: 4rem 8rem; }
+    padding: 4rem 10rem; }
   .attoneys .section-title {
-    color: #f0d270; }
+    color: #312602; }
+    .attoneys .section-title::after {
+      background-color: currentColor; }
 
 .attoney {
   width: 100%;
   height: 35rem;
   border-radius: .5rem;
   position: relative;
-  overflow: hidden;
-  color: #a59e87; }
+  color: #f4ebcc;
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .attoney__side {
+    position: absolute;
+    transition: all .8s ease;
+    height: 35rem;
+    width: 100%;
+    backface-visibility: hidden; }
+    .attoney__side--back {
+      background-image: linear-gradient(to right bottom, #080341, #050222, #05040e, #05040e);
+      transform: rotateY(180deg);
+      padding: 3rem;
+      text-align: left;
+      display: grid;
+      grid-row-gap: 1rem; }
+      .attoney__side--back h5 {
+        color: #f0d270;
+        border-bottom: solid 1px currentColor; }
+  .attoney:hover .attoney__side--front {
+    transform: rotateY(-180deg); }
+  .attoney:hover .attoney__side--back {
+    transform: rotateY(0); }
   .attoney p {
     font-size: 1.5rem; }
   .attoney__img {

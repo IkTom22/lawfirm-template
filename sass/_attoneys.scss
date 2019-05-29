@@ -1,13 +1,15 @@
 .attoneys {
     padding: 5rem 0;
+    
     grid-column: full-start / full-end;
+    background-blend-mode: screen;
 
-    background-image: linear-gradient(to right bottom, 
-                                        rgba($color-secondary-dark, .8), 
-                                        rgba($color-secondary-dark, .7), 
-                                        rgba($color-secondary, .7), 
-                                        rgba($color-primary, .6)), 
-                                        url(../img/chess-01-lg.jpg);
+    // background-image: linear-gradient(to right bottom, 
+    //                                     rgba($color-primary-dark, .4), 
+    //                                     rgba($color-primary-dark, .9)), 
+    //                                     url(../img/chess-01-lg.jpg);
+
+    background-image: linear-gradient(to right bottom, $color-light-blue, $color-light-blue), url(../img/chess-01-lg.jpg);                                                                    
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,10 +23,10 @@
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         grid-gap: 6rem;
         
-        padding: 4rem 8rem;
+        padding: 4rem 10rem;
     }
     & .section-title {
-        color: $color-primary-light;
+        color: $color-primary-dark-2;
     }
 }
 
@@ -35,8 +37,51 @@
     height: 35rem;
     border-radius: .5rem;
     position: relative;
-    overflow: hidden;
-    color: $color-grey-light-2;
+    // overflow: hidden;
+    color: $color-grey-light-1;
+    
+//perspective need to be added on the parent
+    perspective: 150rem;
+    -moz-perspective: 150rem; 
+    
+
+    &__side {
+        position: absolute;
+        transition: all .8s ease;
+        height: 35rem;
+        width: 100%;
+        backface-visibility: hidden;
+        
+
+        &--front {
+            
+        }
+
+        &--back {
+            background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-mid, $color-secondary-dark, $color-secondary-dark);
+          // background-image:linear-gradient(to right bottom, $color-white, $color-white, $color-primary-light);
+            transform: rotateY(180deg);
+            padding: 3rem;
+            text-align: left;
+
+           display: grid;
+           grid-row-gap: 1rem;
+            & h5 {
+                color: $color-primary-light;
+                border-bottom: solid 1px currentColor;
+            
+            }
+        }
+    }
+
+    
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
     
     p {
         font-size: 1.5rem;
@@ -65,8 +110,9 @@
         color: $color-primary-light;
     }
 
-    &__btn {
+    &__profile {
 
+        
         
     }
 
