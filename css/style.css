@@ -194,49 +194,55 @@ body {
     font-family: "Lato", sans-serif; }
 
 .fields {
-  margin: 5rem 0;
-  grid-column: center-start / center-end;
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
-  padding: 0 4rem; }
-  .fields h2 {
-    grid-column: 1 /-1; }
-    .fields h2::after {
-      content: "";
-      display: block;
-      height: 1.5px;
-      width: 8rem;
-      background-color: rgba(160, 124, 8, 0.8);
-      margin: 1rem auto; }
-
-.field {
-  display: grid;
-  grid-gap: 1.5rem;
-  justify-content: center;
-  padding: 4rem 3rem;
-  box-shadow: 0 1rem 2rem rgba(160, 124, 8, 0.2);
-  transition: all .2s; }
-  .field__icon {
-    fill: #a07c08;
-    width: 6rem;
-    height: 6rem;
-    justify-self: center;
-    transform: translateY(-1rem);
-    padding: 1rem;
-    border: 1px solid #614c06; }
-  .field__text {
-    font-size: 1.6rem;
-    color: #a59e87; }
-  .field h4 {
-    color: #614c06;
-    font-weight: 400; }
-  .field:hover {
-    transform: translateY(-1rem);
-    box-shadow: 0 2rem 2rem rgba(160, 124, 8, 0.3); }
+  padding: 5rem 0;
+  grid-column: full-start / full-end;
+  background-image: url(../img/review-lg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .fields__content {
+    display: grid;
+    grid-column: center-start / center-end;
+    justify-content: center;
+    text-align: center;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 5rem;
+    padding: 4rem 8rem; }
+    .fields__content h2 {
+      grid-column: 1 /-1; }
+      .fields__content h2::after {
+        content: "";
+        display: block;
+        height: 1.5px;
+        width: 8rem;
+        background-color: rgba(160, 124, 8, 0.8);
+        margin: 1rem auto; }
+  .fields .field {
+    display: grid;
+    grid-gap: 1.5rem;
+    justify-content: center;
+    background-color: rgba(5, 4, 14, 0.8);
+    padding: 4rem 3rem;
+    box-shadow: 0 1rem 2rem rgba(160, 124, 8, 0.2);
+    transition: all .2s; }
+    .fields .field__icon {
+      fill: #a07c08;
+      width: 6rem;
+      height: 6rem;
+      justify-self: center;
+      transform: translateY(-1rem);
+      padding: 1rem;
+      border: 1px solid #614c06; }
+    .fields .field__text {
+      font-size: 1.6rem;
+      color: #a59e87; }
+    .fields .field h4 {
+      color: #a07c08;
+      font-weight: 400; }
+    .fields .field:hover {
+      transform: translateY(-1rem);
+      box-shadow: 0 2rem 2rem rgba(160, 124, 8, 0.3); }
 
 .about {
   background-color: rgba(17, 15, 34, 0.9);
@@ -257,15 +263,23 @@ body {
     object-fit: cover; }
 
 .attoneys {
-  margin: 5rem 0;
-  grid-column: center-start/center-end;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
-  justify-content: center;
-  align-items: start;
-  text-align: center;
-  padding: 0 4rem; }
+  padding: 5rem 0;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(to right bottom, rgba(5, 4, 14, 0.8), rgba(5, 4, 14, 0.7), rgba(17, 15, 34, 0.7), rgba(160, 124, 8, 0.6)), url(../img/chess-01-lg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .attoneys__content {
+    display: grid;
+    grid-column: center-start / center-end;
+    justify-content: center;
+    text-align: center;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    padding: 4rem 8rem; }
+  .attoneys .section-title {
+    color: #f0d270; }
 
 .attoney {
   width: 100%;
