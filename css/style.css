@@ -78,7 +78,8 @@ body {
 
 .heading-4 {
   font-size: 1.8rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 300; }
 
 .heading-5 {
   font-size: 1.5rem;
@@ -164,7 +165,7 @@ body {
     transform: translateY(-1.1rem); }
 
 .initialcontact {
-  background-color: #02010f;
+  background-image: linear-gradient(to right bottom, #05040e, #02010f, #05040e, #067c72, #05040e);
   color: #fff;
   grid-column: col-start 6 / -1;
   display: grid;
@@ -244,37 +245,41 @@ body {
 
 .about {
   grid-column: full-start / full-end;
-  background-color: #05040e;
+  background-image: linear-gradient(to right bottom, #05040e, #02010f, #067c72, #05040e);
   padding: 5rem 0; }
+  .about h2 {
+    color: #f0d270;
+    font-weight: 300; }
   .about__content {
     display: grid;
-    grid-template-columns: repeat(2, minmax(30rem, 1fr));
+    grid-template-columns: repeat(2, minmax(25rem, 1fr));
     grid-row-gap: 5rem;
-    grid-column-gap: 2rem;
-    padding: 4rem 8rem;
+    grid-column-gap: 5rem;
+    padding: 4rem 12rem;
     justify-content: center;
     align-items: center; }
-    .about__content h2 {
-      color: #f0d270; }
+    .about__content h4 {
+      color: #f0d270;
+      font-weight: 300; }
   .about__feature {
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-column-gap: 2rem;
+    grid-column-gap: 3rem;
     align-items: center; }
   .about__icon {
     width: 8rem;
     height: 8rem;
     grid-row: 1 /2;
-    fill: #a07c08; }
+    fill: #f0d270; }
   .about__text {
     grid-column: 2/3;
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #f4ebcc; }
 
 .attoneys {
   padding: 5rem 0;
   grid-column: full-start / full-end;
-  background-blend-mode: screen;
-  background-image: linear-gradient(to right bottom, #067c72, #067c72), url(../img/chess-01-lg.jpg);
+  background-image: linear-gradient(to right bottom, #111111 #f0f0f6, #067c72);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -309,15 +314,17 @@ body {
     border-radius: 5px;
     overflow: hidden; }
     .attoney__side--back {
-      background-image: linear-gradient(to right bottom, #080341, #050222, #05040e, #05040e);
+      background-image: linear-gradient(to right bottom, #05040e, #02010f, #067c72, #05040e);
       transform: rotateY(180deg);
-      padding: 3rem;
+      padding: 2rem 3rem;
       text-align: left;
       display: grid;
       grid-row-gap: 1rem; }
       .attoney__side--back h5 {
         color: #f0d270;
         border-bottom: solid 1px currentColor; }
+      .attoney__side--back p {
+        font-size: 1.3rem; }
   .attoney:hover .attoney__side--front {
     transform: rotateY(-180deg); }
   .attoney:hover .attoney__side--back {

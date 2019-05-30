@@ -2,14 +2,10 @@
     padding: 5rem 0;
     
     grid-column: full-start / full-end;
-    background-blend-mode: screen;
+    // background-blend-mode: screen;
+   background-image: linear-gradient(to right bottom, $color-black $color-white, $color-light-blue);
 
-    // background-image: linear-gradient(to right bottom, 
-    //                                     rgba($color-primary-dark, .4), 
-    //                                     rgba($color-primary-dark, .9)), 
-    //                                     url(../img/chess-01-lg.jpg);
-
-    background-image: linear-gradient(to right bottom, $color-light-blue, $color-light-blue), url(../img/chess-01-lg.jpg);                                                                    
+    //background-image: linear-gradient(to right bottom, $color-light-blue, $color-light-blue), url(../img/chess-01-lg.jpg);                                                                    
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,10 +56,15 @@
         // }
 
         &--back {
-            background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-mid, $color-secondary-dark, $color-secondary-dark);
+            background-image: linear-gradient(to right bottom, 
+                                        $color-secondary-dark, 
+                                        $color-secondary, 
+                                        $color-light-blue, 
+                                        $color-secondary-dark);
+            //background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-mid, $color-secondary-dark, $color-secondary-dark);
           // background-image:linear-gradient(to right bottom, $color-white, $color-white, $color-primary-light);
             transform: rotateY(180deg);
-            padding: 3rem;
+            padding: 2rem 3rem;
             text-align: left;
 
            display: grid;
@@ -71,7 +72,9 @@
             & h5 {
                 color: $color-primary-light;
                 border-bottom: solid 1px currentColor;
-            
+            }
+            & p {
+                font-size: 1.3rem;
             }
         }
     }

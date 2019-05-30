@@ -1,39 +1,51 @@
 .about {                                 
     grid-column: full-start / full-end;
     // position: relative;  
-    background-color: $color-secondary-dark;
+    background-image: linear-gradient(to right bottom, 
+                                        $color-secondary-dark, 
+                                        $color-secondary, 
+                                        $color-light-blue, 
+                                        $color-secondary-dark);
     padding: 5rem 0;
     
     
+    & h2 {
+        color: $color-primary-light;
+        font-weight: 300;
+    }
+    
     &__content{
         display: grid;
-        grid-template-columns: repeat(2, minmax(30rem, 1fr));
+        grid-template-columns: repeat(2, minmax(25rem, 1fr));
         grid-row-gap: 5rem;
-        grid-column-gap: 2rem;
-        padding: 4rem 8rem;
+        grid-column-gap: 5rem;
+        padding: 4rem 12rem;
         justify-content: center;
-        align-items: center;
-        
-        & h2 {
+        align-items: center;  
+
+        & h4 {
             color: $color-primary-light;
+            font-weight: 300;
         }
-        
     }
+
+
     &__feature {
         display: grid;
         grid-template-columns: min-content 1fr;
-        grid-column-gap: 2rem;
+        grid-column-gap: 3rem;
         align-items: center;
     }
     &__icon {
         width: 8rem;
         height: 8rem;
         grid-row: 1 /2;
-        fill: $color-primary;
+        fill: $color-primary-light;
     }
     &__text{
         grid-column: 2/3;
         font-size: 2rem;
+        color: $color-grey-light-1;
     }
 
 }
