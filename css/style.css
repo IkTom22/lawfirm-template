@@ -17,7 +17,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh min-content 40vw repeat(4, min-content);
+  grid-template-rows: 100vh repeat(6, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .btn, .btn:link, .btn:visited {
@@ -86,13 +86,14 @@ body {
   font-weight: 300; }
 
 .section-title {
-  grid-column: 1 /-1; }
+  grid-column: 1 /-1;
+  text-align: center; }
   .section-title::after {
     content: "";
     display: block;
     height: 1.5px;
     width: 8rem;
-    background-color: rgba(160, 124, 8, 0.8);
+    background-color: rgba(97, 76, 6, 0.8);
     margin: 1rem auto; }
 
 .header {
@@ -214,58 +215,60 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 5rem;
     padding: 4rem 8rem; }
-    .fields__content h2 {
-      grid-column: 1 /-1; }
-      .fields__content h2::after {
-        content: "";
-        display: block;
-        height: 1.5px;
-        width: 8rem;
-        background-color: rgba(160, 124, 8, 0.8);
-        margin: 1rem auto; }
-  .fields .field {
-    display: grid;
-    grid-gap: 1.5rem;
-    justify-content: center;
-    background-color: rgba(5, 4, 14, 0.8);
-    padding: 4rem 3rem;
-    box-shadow: 0 1rem 2rem rgba(160, 124, 8, 0.2);
-    transition: all .2s; }
-    .fields .field__icon {
-      fill: #a07c08;
-      width: 6rem;
-      height: 6rem;
-      justify-self: center;
-      transform: translateY(-1rem);
-      padding: 1rem;
-      border: 1px solid #614c06; }
-    .fields .field__text {
-      font-size: 1.6rem;
-      color: #a59e87; }
-    .fields .field h4 {
-      color: #a07c08;
-      font-weight: 400; }
-    .fields .field:hover {
-      transform: translateY(-1rem);
-      box-shadow: 0 2rem 2rem rgba(160, 124, 8, 0.3); }
+
+.field {
+  display: grid;
+  grid-gap: 1.5rem;
+  justify-content: center;
+  background-color: rgba(5, 4, 14, 0.8);
+  padding: 4rem 3rem;
+  box-shadow: 0 1rem 2rem rgba(160, 124, 8, 0.2);
+  transition: all .2s; }
+  .field__icon {
+    fill: #a07c08;
+    width: 6rem;
+    height: 6rem;
+    justify-self: center;
+    transform: translateY(-1rem);
+    padding: 1rem;
+    border: 1px solid #614c06; }
+  .field__text {
+    font-size: 1.6rem;
+    color: #a59e87; }
+  .field h4 {
+    color: #a07c08;
+    font-weight: 400; }
+  .field:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 2rem 2rem rgba(160, 124, 8, 0.3); }
 
 .about {
-  background-color: rgba(8, 3, 65, 0.9);
   grid-column: full-start / full-end;
-  position: relative; }
-
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  .bg-video__content {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
+  background-color: #05040e;
+  padding: 5rem 0; }
+  .about__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30rem, 1fr));
+    grid-row-gap: 5rem;
+    grid-column-gap: 2rem;
+    padding: 4rem 8rem;
+    justify-content: center;
+    align-items: center; }
+    .about__content h2 {
+      color: #f0d270; }
+  .about__feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 2rem;
+    align-items: center; }
+  .about__icon {
+    width: 8rem;
+    height: 8rem;
+    grid-row: 1 /2;
+    fill: #a07c08; }
+  .about__text {
+    grid-column: 2/3;
+    font-size: 2rem; }
 
 .attoneys {
   padding: 5rem 0;
@@ -286,8 +289,6 @@ body {
     padding: 4rem 10rem; }
   .attoneys .section-title {
     color: #312602; }
-    .attoneys .section-title::after {
-      background-color: currentColor; }
 
 .attoney {
   width: 100%;
@@ -302,7 +303,11 @@ body {
     transition: all .8s ease;
     height: 35rem;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    overflow: hidden; }
     .attoney__side--back {
       background-image: linear-gradient(to right bottom, #080341, #050222, #05040e, #05040e);
       transform: rotateY(180deg);

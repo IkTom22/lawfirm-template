@@ -22,17 +22,7 @@
     
     padding: 4rem 8rem;
     // background-color: rgba($color-primary, .1);
-    & h2 {
-        grid-column: 1 /-1;
-        
-        &::after {
-            content: "";
-            display: block;
-            height: 1.5px;
-            width: 8rem;
-            background-color: rgba($color-primary, .8);
-            margin: 1rem auto;
-        }
+    
     }
  }
    
@@ -72,4 +62,5 @@
         }
 
     }
-}           
+
+     

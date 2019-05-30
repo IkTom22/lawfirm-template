@@ -51,11 +51,13 @@
         height: 35rem;
         width: 100%;
         backface-visibility: hidden;
-        
-
-        &--front {
+        top:0;
+        left:0;
+        border-radius: 5px;
+        overflow: hidden;
+        // &--front {
             
-        }
+        // }
 
         &--back {
             background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-mid, $color-secondary-dark, $color-secondary-dark);

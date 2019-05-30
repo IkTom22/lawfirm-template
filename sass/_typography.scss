@@ -35,13 +35,14 @@
 
 .section-title {
     grid-column: 1 /-1;
+    text-align: center;
         
         &::after {
             content: "";
             display: block;
             height: 1.5px;
             width: 8rem;
-            background-color: rgba(currentColor, .8);
+            background-color: rgba($color-primary-dark, .8);
             margin: 1rem auto;
         }
 }
