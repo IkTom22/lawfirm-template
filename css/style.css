@@ -17,7 +17,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh repeat(6, min-content);
+  grid-template-rows: 100vh repeat(3, min-content) 40vw repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .btn, .btn:link, .btn:visited {
@@ -94,7 +94,7 @@ body {
     display: block;
     height: 1.5px;
     width: 8rem;
-    background-color: rgba(97, 76, 6, 0.8);
+    background-color: rgba(160, 124, 8, 0.8);
     margin: 1rem auto; }
 
 .header {
@@ -279,10 +279,11 @@ body {
 .attoneys {
   padding: 5rem 0;
   grid-column: full-start / full-end;
-  background-image: linear-gradient(to right bottom, #111111 #f0f0f6, #067c72);
+  background-image: linear-gradient(rgba(6, 124, 114, 0.6), rgba(160, 124, 8, 0.7)), url(../img/pen-lg.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .attoneys__content {
     display: grid;
     grid-column: center-start / center-end;
@@ -293,7 +294,9 @@ body {
     grid-gap: 6rem;
     padding: 4rem 10rem; }
   .attoneys .section-title {
-    color: #312602; }
+    color: #f0d270; }
+    .attoneys .section-title::after {
+      background-color: #f0d270; }
 
 .attoney {
   width: 100%;
@@ -348,13 +351,58 @@ body {
     font-weight: 300;
     color: #f0d270; }
 
-.stories__pictures {
-  background-color: purple;
-  grid-column: full-start / col-end 7; }
+.review__main {
+  grid-column: full-start / col-end 3;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center; }
 
-.stories__text {
+.review__img {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 /-1;
+  grid-row: 1/-1;
+  object-fit: cover;
+  background-image: linear-gradient(#111111, #fdd29d); }
+
+.review__blur-box {
+  z-index: 5;
+  grid-row: 3 /6;
+  grid-column: 2 / 8;
+  height: 35rem;
+  width: 35rem;
+  border-radius: 50%;
+  filter: blur(10px);
+  background-color: rgba(253, 210, 157, 0.6); }
+
+.review__large {
+  color: #05040e;
+  grid-row: 3 /6;
+  grid-column: 2 / 8;
+  z-index: 6; }
+  .review__large--title {
+    text-transform: capitalize;
+    font-weight: 400; }
+  .review__large--quote {
+    font-size: 1.8rem; }
+  .review__large::before {
+    content: "\201c";
+    position: absolute;
+    top: -2%;
+    left: 10%;
+    font-size: 20rem;
+    color: rgba(97, 76, 6, 0.3);
+    font-family: sans-serif; }
+
+.review__text {
   background-color: blanchedalmond;
-  grid-column: col-start 8 / -1; }
+  grid-column: col-start 4 / -1; }
 
 .contact {
   background-color: lightskyblue;

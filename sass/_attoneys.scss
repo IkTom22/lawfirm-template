@@ -3,12 +3,12 @@
     
     grid-column: full-start / full-end;
     // background-blend-mode: screen;
-   background-image: linear-gradient(to right bottom, $color-black $color-white, $color-light-blue);
 
-    //background-image: linear-gradient(to right bottom, $color-light-blue, $color-light-blue), url(../img/chess-01-lg.jpg);                                                                    
+    background-image: linear-gradient(rgba($color-light-blue, .6), rgba($color-primary, .7)), url(../img/pen-lg.jpg);                                                                    
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     
     &__content{
         display: grid;
@@ -22,7 +22,10 @@
         padding: 4rem 10rem;
     }
     & .section-title {
-        color: $color-primary-dark-2;
+        color: $color-primary-light;
+        &::after {
+            background-color: $color-primary-light;
+        }
     }
 }
 

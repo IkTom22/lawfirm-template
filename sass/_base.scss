@@ -22,6 +22,10 @@ $color-grey-dark-2: #3a362d;
 $color-white: #f0f0f6;
 $color-black:#111111;
 
+$color-pink: #fdd29d;
+$color-pink-mid: #f5ac75;
+$color-pink-dark: #bd6d52;
+
 // FONT VARIABLES
 $font-primary: 'Lato', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
@@ -55,7 +59,7 @@ body {
 }
 .container {
     display: grid;
-    grid-template-rows: 100vh repeat(6, min-content);
+    grid-template-rows: 100vh repeat(3, min-content) 40vw repeat(2, min-content);
     // start with 8 column layout and add the extra columns
     // sidebar/ 1fr(left side of the 8 column to center the main 8 column)/ 8 column / 1fr(right side of the 8 column to center the main 8 column)
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; //1140/8 = 142.5
