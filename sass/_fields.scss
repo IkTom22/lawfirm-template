@@ -58,7 +58,7 @@
         }
     &:hover {
         transform: translateY(-1rem);
-        box-shadow: 0 2rem 2rem rgba($color-primary, .3);
+        @include goldShadow;
         }
 
     }

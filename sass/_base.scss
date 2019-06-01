@@ -26,6 +26,11 @@ $color-pink: #fdd29d;
 $color-pink-mid: #f5ac75;
 $color-pink-dark: #bd6d52;
 
+
+$color-beige: #f5f0c6;
+$color-beige-mid: #e1b266;
+$color-beige-dark: #a76b40;
+
 // FONT VARIABLES
 $font-primary: 'Lato', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
@@ -52,7 +57,7 @@ body {
     font-family: $font-primary;
     // color: $color-grey-dark-2;
     color: $color-grey-dark-1;
-    
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.6;
 

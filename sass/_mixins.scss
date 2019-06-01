@@ -1,0 +1,44 @@
+@mixin goldShadow {
+    box-shadow: 0 2rem 2rem rgba($color-primary-dark, .3);
+}
+
+@mixin quote {
+    &::before{
+        content: "\201c";
+        position: absolute;
+        color: rgba($color-primary-dark, .3);
+        font-family: sans-serif;
+        z-index: 10;
+    }
+}
+
+@mixin sideLines { 
+    &::before,
+    &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: $color-primary-dark;
+    }
+}
+
+@mixin blueAngle {
+    background-image: linear-gradient(130deg, 
+                                        rgba($color-light-blue, .5) 0%, 
+                                        rgba($color-light-blue, .2) 50%, 
+                                        rgba($color-beige, 1) 50%);
+}
+
+@mixin goldAngle {
+    background-image: linear-gradient(130deg, 
+                                        rgba($color-primary, .9) 0%, 
+                                        rgba($color-primary-light, .5) 50%, 
+                                        rgba($color-beige, .2) 50%);
+}
+
+@mixin pinkAngle {
+    background-image: linear-gradient(130deg, 
+                                        rgba($color-pink-mid, .5) 0%, 
+                                        rgba($color-pink-mid, .2) 50%, 
+                                        rgba($color-beige, .2) 50%);
+}
