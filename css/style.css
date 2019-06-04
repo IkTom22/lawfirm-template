@@ -280,7 +280,7 @@ body {
 .attoneys {
   padding: 5rem 0;
   grid-column: full-start / full-end;
-  background-image: linear-gradient(rgba(6, 124, 114, 0.6), rgba(160, 124, 8, 0.7)), url(../img/pen-lg.jpg);
+  background-image: linear-gradient(rgba(5, 4, 14, 0.6), rgba(160, 124, 8, 0.6)), url(../img/pen-lg.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,7 +328,8 @@ body {
         color: #f0d270;
         border-bottom: solid 1px currentColor; }
       .attoney__side--back p {
-        font-size: 1.3rem; }
+        font-size: 1.3rem;
+        hyphens: auto; }
   .attoney:hover .attoney__side--front {
     transform: rotateY(-180deg); }
   .attoney:hover .attoney__side--back {
@@ -405,90 +406,101 @@ body {
     top: -8%;
     left: 10%;
     font-size: 20rem; }
-  .review__large--name {
-    display: grid;
-    grid-template-columns: 3rem 10rem 3rem;
-    grid-gap: 1rem;
-    font-size: 1.5rem;
-    color: currentColor;
-    align-items: center;
-    justify-content: center;
-    align-content: center; }
-    .review__large--name::before, .review__large--name::after {
-      content: "";
-      height: 1px;
-      display: block;
-      background-color: #614c06; }
+
+.review__name {
+  display: grid;
+  grid-template-columns: 3rem 10rem 3rem;
+  grid-gap: 1rem;
+  font-size: 1.5rem;
+  color: currentColor;
+  align-items: center;
+  justify-content: center;
+  align-content: center; }
+  .review__name::before, .review__name::after {
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: currentColor; }
 
 .review__text {
   width: 100%;
   height: 100%;
-  background-color: #f5f0c6;
   grid-column: col-start 4 / -1;
   display: grid;
-  grid-template-columns: repeat(12, minmax(auto, 5.8rem));
-  grid-template-rows: repeat(10, minmax(auto, 4.1rem));
-  grid-gap: 1rem;
-  padding: 5rem 3rem;
+  grid-template-columns: repeat(8, minmax(7.6rem, 1fr));
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 1.5rem;
+  padding: 3rem 8rem;
   justify-content: center;
   align-items: center;
   letter-spacing: .1rem;
-  background-color: #111111; }
+  background-image: linear-gradient(to bottom, rgba(90, 85, 68, 0.3), rgba(17, 17, 17, 0.3)), url(../img/agreement_01-sml.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
   .review__text h2 {
-    color: #f0d270; }
+    color: #f0d270;
+    grid-column: 1/-1;
+    grid-row: 1 / 2; }
 
 .review__sml {
-  padding: 2rem;
+  z-index: 1;
   border-radius: 5px;
   font-weight: 400;
   font-size: 1.2rem;
   font-style: italic;
-  background: #f5f0c6;
-  position: relative; }
-  .review__sml::before {
-    content: "\201c";
-    position: absolute;
-    color: rgba(97, 76, 6, 0.3);
-    font-family: sans-serif;
-    z-index: 10; }
-  .review__sml::before {
-    top: -8%;
-    left: 2%;
-    font-size: 5rem; }
+  margin: 0 5em; }
   .review__sml--title {
     font-weight: 400;
     text-transform: capitalize;
-    color: #614c06; }
+    color: #f0d270; }
+  .review__sml--content {
+    position: relative;
+    padding: 2rem 3rem;
+    background-color: rgba(17, 17, 17, 0.5);
+    border-radius: 5px;
+    color: #f0d270;
+    text-align: center; }
+    .review__sml--content::before {
+      content: "\201c";
+      position: absolute;
+      color: rgba(97, 76, 6, 0.3);
+      font-family: sans-serif;
+      z-index: 10; }
+    .review__sml--content::before {
+      top: -10%;
+      left: 25%;
+      font-size: 5rem;
+      color: rgba(160, 124, 8, 0.7); }
+  .review__sml--quote {
+    font-size: 1.7rem;
+    color: #f0d270; }
+  .review__sml--name::before, .review__sml--name::after {
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: currentColor; }
   .review__sml--1 {
-    grid-row: 3 / 5;
     grid-column: 1 / 8;
-    background-image: linear-gradient(130deg, rgba(245, 172, 117, 0.5) 0%, rgba(245, 172, 117, 0.2) 50%, rgba(245, 240, 198, 0.2) 50%);
-    z-index: 4; }
+    grid-row: 2 / 5; }
   .review__sml--2 {
-    grid-row: 2 / 5;
-    grid-column: 8 /-1;
-    background-image: linear-gradient(130deg, rgba(6, 124, 114, 0.5) 0%, rgba(6, 124, 114, 0.2) 50%, #f5f0c6 50%);
-    z-index: 6; }
-  .review__sml--3 {
-    grid-row: 4 / 7;
-    grid-column: 7 / 12;
-    background-image: linear-gradient(130deg, rgba(160, 124, 8, 0.9) 0%, rgba(240, 210, 112, 0.5) 50%, rgba(245, 240, 198, 0.2) 50%);
-    z-index: 7; }
-  .review__sml--4 {
-    grid-row: 5 / 7;
-    grid-column: 4 / 9;
-    background-image: linear-gradient(130deg, rgba(6, 124, 114, 0.5) 0%, rgba(6, 124, 114, 0.2) 50%, #f5f0c6 50%);
-    z-index: 5; }
-  .review__sml--5 {
-    grid-row: 7 / 9;
-    grid-column: 2 /7;
-    background-image: linear-gradient(130deg, rgba(245, 172, 117, 0.5) 0%, rgba(245, 172, 117, 0.2) 50%, rgba(245, 240, 198, 0.2) 50%);
-    z-index: 3; }
-  .review__sml--6 {
-    grid-row: 4 / 8;
-    grid-column: 3 /6;
-    background-image: linear-gradient(130deg, rgba(160, 124, 8, 0.9) 0%, rgba(240, 210, 112, 0.5) 50%, rgba(245, 240, 198, 0.2) 50%);
-    z-index: 2; }
+    grid-column: 3 / -1;
+    grid-row: 5 / -1; }
+
+.glass {
+  position: relative;
+  overflow: hidden; }
+  .glass::before {
+    background: transparent url(../img/agreement_01-mid.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(5px); }
+  .glass::before {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%; }
 
 .contact {
   background-color: lightskyblue;
