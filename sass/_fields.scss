@@ -1,13 +1,9 @@
 .fields {
-    // background-color: $color-grey-light-1;
-    // grid-row: 2 /3;
     padding: 5rem 0;
-    // 
     grid-column: full-start / full-end;
     background-image: url(../img/review-lg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    // background-position: center;
     background-size: cover;
     
 
@@ -17,11 +13,11 @@
     justify-content: center;
     text-align: center;
     align-items: start;  
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem)); 
+    grid-template-rows: repeat(auto-fit, minmax(3.52rem, 1fr));  
     grid-gap: 5rem;
     
     padding: 4rem 8rem;
-    // background-color: rgba($color-primary, .1);
     
     }
  }
@@ -30,12 +26,17 @@
 .field {
     display: grid;
     grid-gap: 1.5rem;
-    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    align-content: start;
     background-color: rgba($color-secondary-dark, .8);
     padding: 4rem 3rem;
     box-shadow: 0 1rem 2rem rgba($color-primary, .2);
     transition: all .2s;
+    height: 100%;
     
+    
+
     &__icon {
         fill: $color-primary;
         width: 6rem;
