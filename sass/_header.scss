@@ -22,13 +22,7 @@
         // justify-content: center;
         align-items: center;
         color: rgba($color-primary, .7);
-        &::before, 
-        &::after {
-            content: "";
-            display: block;
-            height: 1px;
-            background-color: currentColor;
-        }
+        @include sideLines;
     }
 
         &__sub {

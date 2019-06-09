@@ -1,5 +1,14 @@
 .contact {
-    background-color: lightskyblue;
+    background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_lg_01.jpg);
+    background-position: center;
+    background-size: cover;
     grid-column: full-start / full-end;
-    
+    position: relative;
+    &__details {
+        width: 40%;
+    }
+    &__form {
+        width: 40%;
+    }
 }
+

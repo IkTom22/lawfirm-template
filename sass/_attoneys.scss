@@ -3,8 +3,8 @@
     
     grid-column: full-start / full-end;
     // background-blend-mode: screen;
-
-    background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-lg.jpg);                                                                    
+    //background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-lg.jpg);    
+    background-image: linear-gradient(rgba($color-secondary-light, .5), rgba($color-white, .8)), url(../img/pen-lg.jpg);                                                                       
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,10 +60,14 @@
 
         &--back {
             background-image: linear-gradient(to right bottom, 
+                                        $color-black,
                                         $color-secondary-dark, 
                                         $color-secondary, 
+                                        $color-secondary,
                                         $color-light-blue, 
                                         $color-secondary-dark);
+                                    
+                                        
             //background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-mid, $color-secondary-dark, $color-secondary-dark);
           // background-image:linear-gradient(to right bottom, $color-white, $color-white, $color-primary-light);
             transform: rotateY(180deg);

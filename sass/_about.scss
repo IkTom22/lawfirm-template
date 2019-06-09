@@ -43,6 +43,7 @@
         overflow: hidden;
         padding: 0 1.5rem;
         padding-bottom: 1.5rem;
+        border-radius: 5px;
 
         &::before {
             content: "";
@@ -79,7 +80,8 @@
             transform: translateY(-2%);
         }
         &:hover::before   {
-            animation: shine 1.5s ease .3s;
+            animation: shine 2s ease .3s;
+            
             }   
          
     }
@@ -97,8 +99,7 @@
 }
 
 @keyframes shine {
-
-    
+  
     80%{
         top: 250%;
         left: 110%;
