@@ -59,13 +59,20 @@
         // }
 
         &--back {
+            // background-image: linear-gradient(to right bottom, 
+            //                             $color-black,
+            //                             $color-secondary-dark, 
+            //                             $color-secondary, 
+            //                             $color-secondary,
+            //                             $color-light-blue, 
+            //                             $color-secondary-dark);
+            // v. review-3    
             background-image: linear-gradient(to right bottom, 
                                         $color-black,
-                                        $color-secondary-dark, 
-                                        $color-secondary, 
-                                        $color-secondary,
-                                        $color-light-blue, 
-                                        $color-secondary-dark);
+                                        $color-black,
+                                        $color-black,
+                                        rgba($color-black, .6),
+                                        $color-black);                            
                                     
                                         
             //background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-mid, $color-secondary-dark, $color-secondary-dark);
