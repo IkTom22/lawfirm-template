@@ -1,5 +1,5 @@
 @mixin goldShadow {
-    box-shadow: 0 2rem 2rem rgba($color-primary-dark, .3);
+    box-shadow: 0 2rem 2rem rgba($color-primary-dark, .4);
 }
 
 @mixin quote {
@@ -21,3 +21,9 @@
         background-color: currentColor;
     }
 }
+ @mixin centering {
+     display: grid;
+     align-items: center;
+     justify-items: center;
+ }
+
