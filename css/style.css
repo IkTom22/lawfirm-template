@@ -523,11 +523,43 @@ body {
   background-position: center;
   background-size: cover;
   grid-column: full-start / full-end;
-  position: relative; }
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .contact__details {
-    width: 40%; }
+    grid-column: col-start 1 / col-end 4;
+    margin: 10rem auto;
+    background-color: rgba(5, 4, 14, 0.8);
+    padding: 6rem;
+    font-size: 1.6rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    align-items: start;
+    align-content: center;
+    width: 80%;
+    height: 70%; }
+    .contact__details h2 {
+      color: #f0d270; }
+  .contact__main {
+    color: #a59e87; }
+  .contact__address {
+    color: #f4ebcc; }
+  .contact__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: #f0d270; }
+  .contact__detail {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 2rem;
+    align-items: center; }
   .contact__form {
-    width: 40%; }
+    grid-column: col-start 5 / col-end 8;
+    padding: 6rem;
+    margin: 10rem auto;
+    background-color: rgba(5, 4, 14, 0.5); }
+    .contact__form h3 {
+      padding-bottom: 2rem;
+      color: #f0d270; }
 
 .footer {
   background-color: #05040e;

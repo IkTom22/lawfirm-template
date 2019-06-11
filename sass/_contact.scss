@@ -3,12 +3,57 @@
     background-position: center;
     background-size: cover;
     grid-column: full-start / full-end;
-    position: relative;
+    
+    display: grid;
+    grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  
     &__details {
-        width: 40%;
+        grid-column: col-start 1 / col-end 4;
+        margin: 10rem auto;
+        background-color: rgba($color-secondary-dark, .8);     
+        padding: 6rem;
+        font-size: 1.6rem;
+        display: grid;
+        grid-row-gap: 2rem;
+        align-items: start;
+        align-content: center;
+        width: 80%;
+        height: 70%;
+     
+        & h2 {
+            color: $color-primary-light;
+        }
     }
+    &__main {
+        color: $color-grey-light-2;
+    }
+
+    &__address {
+        color: $color-grey-light-1;
+    }
+
+    &__icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        fill: $color-primary-light;
+    }
+
+    &__detail {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-gap: 2rem;
+        align-items: center;
+    }
+
     &__form {
-        width: 40%;
+        grid-column: col-start 5 / col-end 8;
+        padding: 6rem;
+        margin: 10rem auto;
+        background-color: rgba($color-secondary-dark, .5);
+        & h3 {
+            padding-bottom: 2rem;
+            color: $color-primary-light;
+        }
     }
 }
 
