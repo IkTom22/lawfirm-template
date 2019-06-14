@@ -1,33 +1,52 @@
 .header {
     background-color: $color-secondary-dark;
-    background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, .7), rgba($color-secondary-dark, .4)), url(../img/businessman-01-lg.jpg);
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, .7), rgba($color-secondary-dark, .4)), url(../img/businessman-01-md.jpg);
+    @include backgroundAttach;
+    overflow: hidden;
     grid-column: full-start / col-end 5;
     padding: 15% 0;
     text-align: center;
+
     display: grid; 
-    grid-template-columns: minmax(60rem, auto);
+    grid-template-rows: min-content minmax(6rem, min-content) min-content;
+    //grid-template-columns: minmax(60rem, min-content);
     justify-content: center;
     align-items: center;
+    justify-items: center;
+    align-content: center;
     
-    grid-row-gap: 3rem;
+    grid-row-gap: 3.5rem;
 
-    &__logo {
-        display: grid;
-        grid-template-columns: 1fr min-content 1fr;
-        grid-column-gap: 1rem;
-        // justify-content: center;
-        align-items: center;
-        color: rgba($color-primary, .7);
-        @include sideLines;
+    @media only screen and (max-width: $bp-large){
+        grid-column: full-start / -1;
+    }
+    @media only screen and (max-width: $bp-medium){
+        background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, .7), rgba($color-secondary-dark, .4)), url(../img/businessman-01-sml.jpg);
+    }
+    @media only screen and (max-width: $bp-xsmall){
+        background-image: linear-gradient(to right, rgba($color-secondary-dark, 1), rgba($color-secondary-dark, .7), rgba($color-secondary-dark, .4)), url(../img/businessman-01-xsml.jpg);
     }
 
-        &__sub {
+
+    &__logo {
+
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 20rem min-content 20rem;
+        grid-column-gap: 1rem;
+        align-items: center;
+        color: rgba($color-primary, .8);        
+        @include sideLines;
+
+        & span{
+            border: 9px double $color-primary;
+            padding: 2rem;
+        }
+    }
+
+    &__sub {
         font-family: $font-primary;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-transform: uppercase;
 
         display: grid;

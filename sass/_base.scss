@@ -38,9 +38,13 @@ $font-primary: 'Lato', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 
-
 // RESPONSIVE BREAKPOINTS
-
+$bp-largest: 75em; //1200px / 16
+$bp-large: 62.5em; // 1000px / 16
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; //600px
+$bp-xsmall: 28.125em; //450px
+$bp-smallest: 25em; //400px
 
 
 *, 
@@ -54,6 +58,10 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%; //10/16 = 0.625
+    @media only screen and (max-width: $bp-xsmall){
+        font-size: 50%; //8/16 = 0.5
+        
+    }
 }
 body {
     font-family: $font-primary;
@@ -65,6 +73,7 @@ body {
 
 }
 .container {
+    width: 100vw;
     display: grid;
     //grid-template-rows: 100vh repeat(3, min-content) 40vw repeat(2, min-content);
 
@@ -74,6 +83,12 @@ body {
     // start with 8 column layout and add the extra columns
     // sidebar/ 1fr(left side of the 8 column to center the main 8 column)/ 8 column / 1fr(right side of the 8 column to center the main 8 column)
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; //1140/8 = 142.5
+    
+    @media only screen and (max-width: $bp-medium){
+        grid-template-rows: 6rem 80vh repeat(6, min-content);
+        grid-template-columns: [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; //1140/8 = 142.5
+    }
+    
     
     
 }

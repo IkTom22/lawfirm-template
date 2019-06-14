@@ -5,10 +5,8 @@
     // background-blend-mode: screen;
     background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-lg.jpg);    
     // background-image: linear-gradient(rgba($color-secondary-light, .5), rgba($color-white, .8)), url(../img/pen-lg.jpg);                                                                       
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+   
+    @include backgroundAttach;
     
     &__content{
         display: grid;
@@ -17,10 +15,10 @@
         text-align: center;
         align-items: start;  
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        grid-gap: 6rem;
-        
+        grid-gap: 6rem;     
         padding: 4rem 10rem;
     }
+
     & .section-title {
         color: $color-primary-light;
         &::after {
@@ -28,8 +26,6 @@
         }
     }
 }
-
-   
 
 .attoney {
     width: 100%;
@@ -128,12 +124,6 @@
     &__name {
         font-weight: 300;
         color: $color-primary-light;
-    }
-
-    &__profile {
-
-        
-        
     }
 
 }

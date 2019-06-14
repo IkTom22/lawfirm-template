@@ -15,7 +15,10 @@
     align-items: center;
     grid-row-gap: 2rem;
 
-    
+     @media only screen and (max-width: $bp-large){
+        display: none;
+    }
+
     &__title {
         font-weight: 300; 
         grid-column: form-start /form-end;

@@ -1,7 +1,6 @@
 .contact {
     background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_lg_01.jpg);
-    background-position: center;
-    background-size: cover;
+    @include backgroundAttach;
     grid-column: full-start / full-end;
     
     display: grid;

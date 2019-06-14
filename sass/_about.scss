@@ -10,7 +10,8 @@
                                         $color-secondary-dark);
     padding: 5rem 0;
     
-    
+
+
     & h2 {
         color: $color-primary-light;
         font-weight: 300;
@@ -18,13 +19,20 @@
     
     &__content{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min-content, 40%));
+        grid-template-columns: repeat(auto-fit, minmax(35vw, max-content));
         grid-row-gap: 5rem;
         grid-column-gap: 5rem;
 
-        padding: 4rem 12rem;
+        padding: 4rem 10rem;
         justify-content: center;
         align-items: center;  
+
+        @media only screen and (max-width: $bp-largest){
+            padding: 4rem;
+        }
+        @media only screen and (max-width: $bp-medium){
+            padding: 4rem 10rem;
+        }
 
         & h4 {
             color: $color-primary-light;
@@ -36,9 +44,11 @@
     &__feature {
         display: grid;
         // grid-template-columns: min-content 1fr;
-        grid-template-columns: repeat(autofit, minmax(min-content, 1fr));
+        //grid-template-columns: repeat(autofit, minmax(min-content, 1fr));
+        grid-template-columns: min-content;
         
         grid-column-gap: 3rem;
+        grid-row-gap: 1.5rem;
         align-items: center;
         transform: translateY(0);
         transition: all .2s;
@@ -47,6 +57,9 @@
         padding-bottom: 1.5rem;
         border-radius: 5px;
 
+        @media only screen and (max-width: $bp-large){
+            grid-row-gap: 2rem;
+        }
         &::before {
             content: "";
             display: block;
@@ -97,6 +110,10 @@
         grid-column: 2/3;
         font-size: 2rem;
         color: $color-grey-light-1;
+        @media only screen and (max-width: $bp-largest){
+            grid-column: 1/3;
+        }
+
     }
 }
 

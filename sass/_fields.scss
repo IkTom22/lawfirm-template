@@ -2,10 +2,8 @@
     padding: 5rem 0;
     grid-column: full-start / full-end;
     background-image: url(../img/review-lg.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+
+     @include backgroundAttach;
 
  &__content {
     display: grid;
@@ -51,6 +49,10 @@
     &__text {
         font-size: 1.6rem;
         color: $color-grey-light-2;
+
+        @media only screen and (max-width: $bp-xsmall){
+            font-size: 2rem;
+            }
         }
 
     h4 {
