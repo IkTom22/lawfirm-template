@@ -1,16 +1,38 @@
 .contact {
     background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_lg_01.jpg);
     @include backgroundAttach;
+    @media only screen and (max-width: $bp-small){
+        background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_lg_01.jpg);
+        @include backgroundAttach;
+    } 
+
+
     grid-column: full-start / full-end;
     
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  
+    
+    @media only screen and (max-width: $bp-large){
+        justify-items: center;
+        justify-content: center; 
+    }
+    @media only screen and (max-width: $bp-small){
+        grid-template-rows: 1fr; 
+    } 
+
     &__details {
         grid-column: col-start 1 / col-end 4;
         margin: 10rem auto;
         background-color: rgba($color-secondary-dark, .8);     
         padding: 6rem;
+        @media only screen and (max-width: $bp-medium){
+            grid-column: 1 / -1;
+        }  
+        @media only screen and (max-width: $bp-small){
+            margin: 5rem auto;
+            height: 80%;
+            padding: 4rem;
+        } 
         font-size: 1.6rem;
         display: grid;
         grid-row-gap: 2rem;
@@ -25,6 +47,8 @@
     }
     &__main {
         color: $color-grey-light-2;
+        hyphens: auto;
+
     }
 
     &__address {
@@ -46,8 +70,20 @@
 
     &__form {
         grid-column: col-start 5 / col-end 8;
+        @media only screen and (max-width: $bp-medium){
+            grid-column:  1 / -1;
+            width: 70%;
+            margin-top: 0;
+        } 
+       
         padding: 6rem;
         margin: 10rem auto;
+
+        @media only screen and (max-width: $bp-small){
+            margin: 5rem auto;
+            width: 80%;
+            margin-top: 0;  
+        } 
         background-color: rgba($color-secondary-dark, .5);
         & h3 {
             padding-bottom: 2rem;
