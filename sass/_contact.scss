@@ -1,8 +1,17 @@
 .contact {
     background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_lg_01.jpg);
     @include backgroundAttach;
+
+    @media only screen and (max-width: $bp-medium){
+        background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_md_01.jpg);
+        @include backgroundAttach;
+    } 
     @media only screen and (max-width: $bp-small){
-        background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_lg_01.jpg);
+        background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_sml_01.jpg);
+        @include backgroundAttach;
+    } 
+    @media only screen and (max-width: $bp-smallest){
+        background-image: linear-gradient(rgba($color-secondary-dark, .3), rgba($color-secondary-dark, 0)), url(../img/building_xsml_01.jpg);
         @include backgroundAttach;
     } 
 

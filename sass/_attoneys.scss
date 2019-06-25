@@ -4,8 +4,19 @@
     grid-column: full-start / full-end;
     // background-blend-mode: screen;
     background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-lg.jpg);    
-    // background-image: linear-gradient(rgba($color-secondary-light, .5), rgba($color-white, .8)), url(../img/pen-lg.jpg);                                                                       
-   
+    @media only screen and (max-width: $bp-medium){
+        background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-md.jpg);    
+        @include backgroundAttach;
+    } 
+    @media only screen and (max-width: $bp-small){
+        background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-sml.jpg);    
+        @include backgroundAttach;
+    } 
+    @media only screen and (max-width: $bp-smallest){
+        background-image: linear-gradient(rgba($color-secondary-dark, .6), rgba($color-primary, .6)), url(../img/pen-xsml.jpg);    
+        @include backgroundAttach;
+    } 
+
     @include backgroundAttach;
     
     &__content{

@@ -393,6 +393,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  @media only screen and (max-width: 50em) {
+    .attoneys {
+      background-image: linear-gradient(rgba(5, 4, 14, 0.6), rgba(160, 124, 8, 0.6)), url(../img/pen-md.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .attoneys {
+      background-image: linear-gradient(rgba(5, 4, 14, 0.6), rgba(160, 124, 8, 0.6)), url(../img/pen-sml.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
+  @media only screen and (max-width: 25em) {
+    .attoneys {
+      background-image: linear-gradient(rgba(5, 4, 14, 0.6), rgba(160, 124, 8, 0.6)), url(../img/pen-xsml.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
   .attoneys__content {
     display: grid;
     grid-column: center-start / center-end;
@@ -761,9 +782,23 @@ body {
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 50em) {
+    .contact {
+      background-image: linear-gradient(rgba(5, 4, 14, 0.3), rgba(5, 4, 14, 0)), url(../img/building_md_01.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
   @media only screen and (max-width: 37.5em) {
     .contact {
-      background-image: linear-gradient(rgba(5, 4, 14, 0.3), rgba(5, 4, 14, 0)), url(../img/building_lg_01.jpg);
+      background-image: linear-gradient(rgba(5, 4, 14, 0.3), rgba(5, 4, 14, 0)), url(../img/building_sml_01.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
+  @media only screen and (max-width: 25em) {
+    .contact {
+      background-image: linear-gradient(rgba(5, 4, 14, 0.3), rgba(5, 4, 14, 0)), url(../img/building_xsml_01.jpg);
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
