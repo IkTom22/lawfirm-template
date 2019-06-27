@@ -26,7 +26,7 @@ body {
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem 80vh repeat(6, min-content);
+      grid-template-rows: 100vh repeat(6, min-content);
       grid-template-columns: [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
 
 .btn, .btn:link, .btn:visited {
@@ -170,42 +170,50 @@ body {
       height: 1px;
       background-color: rgba(160, 124, 8, 0.3); }
 
-.sidebar {
+.navigation {
   background-image: linear-gradient(to bottom, #a07c08, #f0d270, #614c06, #a07c08, #f0d270, #614c06, #a07c08);
   grid-row: 1 / -1;
   display: flex;
+  z-index: 1000;
   justify-content: center; }
   @media only screen and (max-width: 50em) {
-    .sidebar {
-      grid-column: 1/ -1;
-      grid-row: 1 /2;
+    .navigation {
+      height: 10vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
       background-image: linear-gradient(to right, #a07c08, #f0d270, #614c06, #a07c08);
       justify-content: flex-end;
       align-content: center; } }
-
-.nav-btn {
-  border: none;
-  border-radius: 0;
-  width: 3.5rem;
-  height: .2rem;
-  background-color: #f4ebcc;
-  margin-top: 4rem;
-  position: fixed; }
-  @media only screen and (max-width: 50em) {
-    .nav-btn {
-      margin-top: 3rem;
-      transform: translateX(-3rem);
-      background-color: rgba(244, 235, 204, 0.7); } }
-  .nav-btn::before, .nav-btn::after {
-    content: "";
-    display: block;
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    border: none;
+    border-radius: 0;
     width: 3.5rem;
     height: .2rem;
-    background-color: rgba(244, 235, 204, 0.7); }
-  .nav-btn::before {
-    transform: translateY(1rem); }
-  .nav-btn::after {
-    transform: translateY(-1.1rem); }
+    background-color: rgba(244, 235, 204, 0.7);
+    margin-top: 4rem;
+    position: fixed; }
+    .navigation__button::before, .navigation__button::after {
+      content: "";
+      display: block;
+      width: 3.5rem;
+      height: .2rem;
+      background-color: rgba(244, 235, 204, 0.7); }
+    .navigation__button::before {
+      transform: translateY(2rem); }
+    .navigation__button::after {
+      transform: translateY(-1.1rem); }
+  .navigation__nav {
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .navigation__list {
+    list-style: none; }
 
 .initialcontact {
   background-image: linear-gradient(to right bottom, #05040e, #02010f, #05040e, #067c72, #05040e);

@@ -1,0 +1,125 @@
+// .sidebar {
+//     background-image: linear-gradient(to bottom, $color-primary, $color-primary-light, $color-primary-dark, $color-primary, $color-primary-light,  $color-primary-dark, $color-primary);
+//     grid-row: 1 / -1;
+//     display: flex;
+//     justify-content: center; 
+
+//     @media only screen and (max-width: $bp-medium){
+//         grid-column: 1/ -1;
+//         grid-row: 1 /2;
+//         background-image: linear-gradient(to right, $color-primary, $color-primary-light, $color-primary-dark, $color-primary); 
+//         justify-content: flex-end; 
+//         align-content: center;
+          
+//     }
+// }
+
+// .nav-btn {
+//     border: none;
+//     border-radius: 0;
+//     width: 3.5rem;
+//     height: .2rem;
+//     background-color: $color-grey-light-1;
+//     margin-top: 4rem;
+//     position: fixed;
+
+//     @media only screen and (max-width: $bp-medium){
+//         margin-top: 3rem;
+//         transform: translateX(-3rem); 
+//         background-color: rgba($color-grey-light-1, .7);  
+//     }
+
+//     &::before,
+//     &::after {
+//         content: "";
+//         display: block;
+//         width: 3.5rem;
+//         height: .2rem;
+//         background-color: rgba($color-grey-light-1, .7);  
+//     }
+//     &::before {
+//         transform: translateY(1rem);
+        
+//     }
+//     &::after {
+//         transform: translateY(-1.1rem);
+        
+//     }
+
+// }
+
+.navigation {
+    background-image: linear-gradient(to bottom, $color-primary, $color-primary-light, $color-primary-dark, $color-primary, $color-primary-light,  $color-primary-dark, $color-primary);
+    grid-row: 1 / -1;
+    display: flex;
+    z-index: 1000;
+    justify-content: center; 
+    
+    @media only screen and (max-width: $bp-medium){
+        // grid-column: 1/ -1;
+        // grid-row: 1 /2;
+        height: 10vh;
+        width: 100vw;
+        position: fixed;
+        top:0;
+        left:0;
+        background-image: linear-gradient(to right, $color-primary, $color-primary-light, $color-primary-dark, $color-primary); 
+        justify-content: flex-end; 
+        align-content: center;
+          
+    }
+    
+    &__checkbox {
+        display: none;
+    }
+    &__button {
+        border: none;
+        border-radius: 0;
+        width: 3.5rem;
+        height: .2rem;
+        background-color: rgba($color-grey-light-1, .7);
+        margin-top: 4rem;
+        position: fixed;
+        
+        
+        &::before, 
+        &::after {
+            content: "";
+            display: block;
+            width: 3.5rem;
+            height: .2rem;
+            background-color: rgba($color-grey-light-1, .7);  
+        }
+        &::before {
+            transform: translateY(2rem);
+            
+        }
+        &::after {
+            transform: translateY(-1.1rem);
+            
+        }
+
+
+    }
+    &__icon {
+        
+    }
+    &__nav {
+        // display: none;
+        width:50vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        left:0;
+        //background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary, $color-primary-light); 
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item{
+
+    }
+    &__link{
+
+    }
+}
