@@ -53,11 +53,8 @@
     grid-row: 1 / -1;
     display: flex;
     z-index: 1000;
-    justify-content: center; 
-    
+    justify-content:center;
     @media only screen and (max-width: $bp-medium){
-        // grid-column: 1/ -1;
-        // grid-row: 1 /2;
         height: 10vh;
         width: 100vw;
         position: fixed;
@@ -70,56 +67,124 @@
     }
     
     &__checkbox {
-        display: none;
+        display: none;       
     }
-    &__button {
-        border: none;
-        border-radius: 0;
-        width: 3.5rem;
-        height: .2rem;
-        background-color: rgba($color-grey-light-1, .7);
-        margin-top: 4rem;
-        position: fixed;
-        
-        
-        &::before, 
-        &::after {
-            content: "";
-            display: block;
-            width: 3.5rem;
-            height: .2rem;
-            background-color: rgba($color-grey-light-1, .7);  
-        }
-        &::before {
-            transform: translateY(2rem);
-            
-        }
-        &::after {
-            transform: translateY(-1.1rem);
-            
-        }
+    
 
-
-    }
-    &__icon {
-        
-    }
-    &__nav {
-        // display: none;
-        width:50vw;
+    &__background {
+        width:0;
         height: 100vh;
         position: fixed;
         top:0;
         left:0;
-        //background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary, $color-primary-light); 
+        background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary, $color-primary-light); 
+        z-index: 60;
+        transition: all .5s;
+        opacity:0;
+    }
+    &__nav {
+        position: fixed;
+
+        z-index: 1000;
+        width: 35vw;
+        height: 100vh;
+        opacity:1;
+        top:0;
+        left:-30vw;
+        @include centering;
+        justify-content: center;
+        align-content: center;
+        opacity: 0;
+        transition: all .5s;
     }
     &__list {
+        text-transform: uppercase;
         list-style: none;
+        
+        @include centering;
+        align-content: center;
+        
+        grid-gap: 1rem;
     }
-    &__item{
 
-    }
     &__link{
-
+        
+        border-radius: 3px;
+        &:visited,
+        &:link{
+            display: inline-block;
+            color: $color-grey-light-1;
+            font-size: 2rem;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgba($color-secondary-dark, .5) 50%);
+            background-size: 235%;
+            transition: all .4s;
+            text-decoration: none;
+            padding: 1rem;
+        }
+        &:hover{
+            
+            background-position: 100%;
+            color: $color-primary-light;
+            transform: translateX(1rem);
+        }
     }
+    &__checkbox:checked ~ &__background {
+        width:35vw;
+        opacity: 1;
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        left:0;
+    }
+    &__button {
+        position: fixed;
+        width: 4.5rem;
+        height: 4.5rem;
+        z-index: 2000;
+        cursor: pointer;
+    }
+    &__icon{
+        position: relative;
+        &,
+        &::before,
+        &::after {
+            width: 3.5rem;
+            height: .2rem;
+            background-color: rgba($color-grey-light-1, .7);
+            display: inline-block;
+            transition: all .2s;
+        }    
+        margin-top: 4rem;  
+        
+        &::before, 
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+        &::before {
+            top: -.8rem;
+        }
+        &::after {
+            top: .8rem; 
+        }
+    }
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }   
+    &__checkbox:checked + &__button &__icon::before {
+       top: 0;
+       transform: rotate(135deg);
+    }   
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+     }
 }
