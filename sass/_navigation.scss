@@ -1,52 +1,3 @@
-// .sidebar {
-//     background-image: linear-gradient(to bottom, $color-primary, $color-primary-light, $color-primary-dark, $color-primary, $color-primary-light,  $color-primary-dark, $color-primary);
-//     grid-row: 1 / -1;
-//     display: flex;
-//     justify-content: center; 
-
-//     @media only screen and (max-width: $bp-medium){
-//         grid-column: 1/ -1;
-//         grid-row: 1 /2;
-//         background-image: linear-gradient(to right, $color-primary, $color-primary-light, $color-primary-dark, $color-primary); 
-//         justify-content: flex-end; 
-//         align-content: center;
-          
-//     }
-// }
-
-// .nav-btn {
-//     border: none;
-//     border-radius: 0;
-//     width: 3.5rem;
-//     height: .2rem;
-//     background-color: $color-grey-light-1;
-//     margin-top: 4rem;
-//     position: fixed;
-
-//     @media only screen and (max-width: $bp-medium){
-//         margin-top: 3rem;
-//         transform: translateX(-3rem); 
-//         background-color: rgba($color-grey-light-1, .7);  
-//     }
-
-//     &::before,
-//     &::after {
-//         content: "";
-//         display: block;
-//         width: 3.5rem;
-//         height: .2rem;
-//         background-color: rgba($color-grey-light-1, .7);  
-//     }
-//     &::before {
-//         transform: translateY(1rem);
-        
-//     }
-//     &::after {
-//         transform: translateY(-1.1rem);
-        
-//     }
-
-// }
 
 .navigation {
     background-image: linear-gradient(to bottom, $color-primary, $color-primary-light, $color-primary-dark, $color-primary, $color-primary-light,  $color-primary-dark, $color-primary);
@@ -62,14 +13,12 @@
         left:0;
         background-image: linear-gradient(to right, $color-primary, $color-primary-light, $color-primary-dark, $color-primary); 
         justify-content: flex-end; 
-        align-content: center;
-          
+        align-content: center;  
     }
     
     &__checkbox {
         display: none;       
     }
-    
 
     &__background {
         width:0;
@@ -81,14 +30,20 @@
         z-index: 60;
         transition: all .5s;
         opacity:0;
+
+        @media only screen and (max-width: $bp-medium){
+            width:100vw;
+            height: 0;
+            background-image: linear-gradient(to left, $color-primary-dark, $color-primary, $color-primary-light);
+        } 
+        
     }
     &__nav {
         position: fixed;
-
         z-index: 1000;
         width: 35vw;
         height: 100vh;
-        opacity:1;
+        // opacity:1;
         top:0;
         left:-30vw;
         @include centering;
@@ -96,19 +51,29 @@
         align-content: center;
         opacity: 0;
         transition: all .5s;
+
+        @media only screen and (max-width: $bp-medium){
+            top:-80vh;
+            left:0;
+            width: 100vw;
+            height: 80vh; 
+        }
     }
     &__list {
         text-transform: uppercase;
         list-style: none;
         
         @include centering;
-        align-content: center;
-        
+        align-content: center;   
         grid-gap: 1rem;
+
+        @media only screen and (max-width: $bp-medium){
+            grid-gap: .5rem;
+            
+        }
     }
 
     &__link{
-        
         border-radius: 3px;
         &:visited,
         &:link{
@@ -120,9 +85,12 @@
             transition: all .4s;
             text-decoration: none;
             padding: 1rem;
+
+            @media only screen and (max-width: $bp-medium){
+                font-size: 1.5rem;
+            }
         }
         &:hover{
-            
             background-position: 100%;
             color: $color-primary-light;
             transform: translateX(1rem);
@@ -131,11 +99,19 @@
     &__checkbox:checked ~ &__background {
         width:35vw;
         opacity: 1;
+        @media only screen and (max-width: $bp-medium){
+            width:100vw;
+            height: 80vh;
+        }
     }
 
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         left:0;
+        @media only screen and (max-width: $bp-medium){
+            top: 0;
+            
+        }
     }
     &__button {
         position: fixed;
@@ -143,6 +119,11 @@
         height: 4.5rem;
         z-index: 2000;
         cursor: pointer;
+        @media only screen and (max-width: $bp-medium){
+            width: 4rem;
+            height: 4rem;
+            transform: translateX(-3rem);
+        } 
     }
     &__icon{
         position: relative;
@@ -154,9 +135,17 @@
             background-color: rgba($color-grey-light-1, .7);
             display: inline-block;
             transition: all .2s;
+            @media only screen and (max-width: $bp-medium){
+                width: 3rem; 
+            } 
+
         }    
         margin-top: 4rem;  
-        
+        @media only screen and (max-width: $bp-medium){
+            margin-top: 2.5rem;
+         
+        } 
+
         &::before, 
         &::after {
             content: "";

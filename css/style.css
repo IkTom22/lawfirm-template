@@ -198,12 +198,16 @@ body {
     z-index: 60;
     transition: all .5s;
     opacity: 0; }
+    @media only screen and (max-width: 50em) {
+      .navigation__background {
+        width: 100vw;
+        height: 0;
+        background-image: linear-gradient(to left, #614c06, #a07c08, #f0d270); } }
   .navigation__nav {
     position: fixed;
     z-index: 1000;
     width: 35vw;
     height: 100vh;
-    opacity: 1;
     top: 0;
     left: -30vw;
     display: grid;
@@ -213,6 +217,12 @@ body {
     align-content: center;
     opacity: 0;
     transition: all .5s; }
+    @media only screen and (max-width: 50em) {
+      .navigation__nav {
+        top: -80vh;
+        left: 0;
+        width: 100vw;
+        height: 80vh; } }
   .navigation__list {
     text-transform: uppercase;
     list-style: none;
@@ -221,6 +231,9 @@ body {
     justify-items: center;
     align-content: center;
     grid-gap: 1rem; }
+    @media only screen and (max-width: 50em) {
+      .navigation__list {
+        grid-gap: .5rem; } }
   .navigation__link {
     border-radius: 3px; }
     .navigation__link:visited, .navigation__link:link {
@@ -232,6 +245,9 @@ body {
       transition: all .4s;
       text-decoration: none;
       padding: 1rem; }
+      @media only screen and (max-width: 50em) {
+        .navigation__link:visited, .navigation__link:link {
+          font-size: 1.5rem; } }
     .navigation__link:hover {
       background-position: 100%;
       color: #f0d270;
@@ -239,15 +255,27 @@ body {
   .navigation__checkbox:checked ~ .navigation__background {
     width: 35vw;
     opacity: 1; }
+    @media only screen and (max-width: 50em) {
+      .navigation__checkbox:checked ~ .navigation__background {
+        width: 100vw;
+        height: 80vh; } }
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
     left: 0; }
+    @media only screen and (max-width: 50em) {
+      .navigation__checkbox:checked ~ .navigation__nav {
+        top: 0; } }
   .navigation__button {
     position: fixed;
     width: 4.5rem;
     height: 4.5rem;
     z-index: 2000;
     cursor: pointer; }
+    @media only screen and (max-width: 50em) {
+      .navigation__button {
+        width: 4rem;
+        height: 4rem;
+        transform: translateX(-3rem); } }
   .navigation__icon {
     position: relative;
     margin-top: 4rem; }
@@ -257,6 +285,12 @@ body {
       background-color: rgba(244, 235, 204, 0.7);
       display: inline-block;
       transition: all .2s; }
+      @media only screen and (max-width: 50em) {
+        .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+          width: 3rem; } }
+    @media only screen and (max-width: 50em) {
+      .navigation__icon {
+        margin-top: 2.5rem; } }
     .navigation__icon::before, .navigation__icon::after {
       content: "";
       position: absolute;
