@@ -1,11 +1,11 @@
 # lawfirm-template
 Goals:
-- create a stunning/strong landing page with a beautiful contact form
+- create a stunning/strong landing page with a simple yet beautiful contact form
 - gold and green color scheme
 - use SCSS and CSS grid 
 - use flip over card animation on "our attoneys" section
-- create "shiny" effect on menu buttons
-- create a clear transparent effect
+- create shiny sliding effect on menu buttons
+- create a clear transparent theme
 - compress and prefix the all SCSS into CSS file
 
 Instructions:
