@@ -6,6 +6,7 @@ Goals:
 - use flip over card animation on "our attoneys" section
 - create shiny sliding effect on menu buttons
 - create a clear transparent theme
+- use SVG icons
 - compress and prefix the all SCSS into CSS file
 
 Instructions:
